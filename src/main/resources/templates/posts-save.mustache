@@ -1,0 +1,38 @@
+{{>layout/header}}
+
+<h1>게시글 등록</h1>
+
+<div class="col-md-12">
+    <div class="col-md-4">
+        <form>
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">헌혈 종류</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+                <option selected>필요한 헌혈 종류 선택</option>
+                <option value="1">전혈</option>
+                <option value="2">혈장</option>
+                <option value="3">혈소판</option>
+                <option value="4">혈장+혈소판</option>
+            </select>
+        </div>
+            <div class="form-group">
+                <label for="title">제목</label>
+                <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요">
+            </div>
+            <div class="form-group">
+                <label for="author">작성자</label>
+                <input type="text" class="form-control" id="author" placeholder="작성자를 입력하세요">
+            </div>
+            <div class="form-group">
+                <label for="content">내용</label>
+                <textarea class="form-control" id="content" placeholder="수혈자 지정번호를 반드시 기입해주세요!"></textarea>
+            </div>
+        </form>
+        <a href="/" role="button" class="btn btn-secondary">취소</a>
+        <button type="button" class="btn btn-primary" id="btn-save">등록</button>
+    </div>
+</div>
+
+{{>layout/footer}}
