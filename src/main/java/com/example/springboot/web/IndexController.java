@@ -34,4 +34,7 @@ public class IndexController {
         return "posts-update";
 
     }
+
+    @GetMapping("/posts/list")
+    public String postsList(){return "postlist";}
 }
