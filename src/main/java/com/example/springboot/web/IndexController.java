@@ -36,5 +36,17 @@ public class IndexController {
     }
 
     @GetMapping("/posts/list")
-    public String postsList(){return "postlist";}
+    public String postsList(Model model){
+        model.addAttribute("posts", postsService.findAllDesc());
+        return "postlist";
+    }
+
+    @GetMapping("/whatisBloodDonation")
+    public String BloodDonation(){return "WhatIsBloodDonation";}
+
+    @GetMapping("/jijeong")
+    public String Jijeong(){return "JijeongBloodDonation";}
+
+    @GetMapping("/references")
+    public String References(){return "references";}
 }
