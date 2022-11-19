@@ -5,6 +5,22 @@
 </style>
 <!-- Page Content-->
 <div class="container">
+    <div class = "row">
+        <a href="/posts/save" role = "button" class = "btn btn-primary">글 등록</a>
+
+        {{#userName}}
+            Logged in as:  <span id="user">{{userName}}</span>
+            <a href="/logout" class = "btn btn-info active" role = "button">Logout</a>
+        {{/userName}}
+        {{^userName}}
+            <a href="/oauth2/authorization/google" class = "btn btn-success active" role="button">Google Login</a>
+        {{/userName}}
+
+        <!--naver-->
+        {{^userName}}
+            <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
+        {{/userName}}
+    </div>
     <!-- Call to Action-->
     <div class="card text-white bg-danger my-5 py-4 text-center">
         <div class="card-body"><p class="text-white m-0">피를 사고파는 매혈 행위는 불법으로 규정되어 있습니다.<br>헌혈에 대한 대가로 금품을 주고받을시, 법적 처벌 대상이 될 수 있습니다.</p></div>
@@ -51,17 +67,6 @@
                 <div class="card-footer"><a class="btn btn-dark btn-sm" href="https://www.bloodinfo.net/blood_house.do">More Info</a></div>
             </div>
         </div>
-    </div>
-    <div class = "row">
-        <a href="/posts/save" role = "button" class = "btn btn-primary">글 등록</a>
-
-        {{#username}}
-            Logged in as: <span id="user">{{userName}}</span>
-            <a href="/logout" class = "btn btn-info active" role = "button">Logout</a>
-        {{/username}}
-        {{^username}}
-            <a href="/oauth2/authorization/google" class = "btn btn-success active" role="button">Google Login</a>
-        {{/username}}
     </div>
 </div>
 
