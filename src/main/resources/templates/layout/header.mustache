@@ -63,9 +63,22 @@
 <!--                    </div>-->
 <!--                </li>-->
                 <li class="nav-item"><a class="nav-link" href="/posts/list">지정헌혈 요청 게시판</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        로그인
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="font-size: 24px">
+                        {{^userName}}
+                            <a class="dropdown-item " href="/oauth2/authorization/google">구글 로그인</a>
+                        {{/userName}}
+                        {{^userName}}
+                            <a class="dropdown-item " href="/oauth2/authorization/naver">네이버 로그인</a>
+                        {{/userName}}
+                    </div>
+                </li>
                 <li class="nav-item"><a class="nav-link" href="/references">참고 사이트</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">로그인</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">회원가입</a></li>
+
+<!--                <li class="nav-item"><a class="nav-link" href="#!">회원가입</a></li>-->
             </ul>
         </div>
     </div>

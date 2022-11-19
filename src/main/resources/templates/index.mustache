@@ -6,20 +6,19 @@
 <!-- Page Content-->
 <div class="container">
     <div class = "row">
-        <a href="/posts/save" role = "button" class = "btn btn-primary">글 등록</a>
 
         {{#userName}}
-            Logged in as:  <span id="user">{{userName}}</span>
+            안녕하세요  <span id="user">{{userName}}</span>!<br>
             <a href="/logout" class = "btn btn-info active" role = "button">Logout</a>
         {{/userName}}
-        {{^userName}}
-            <a href="/oauth2/authorization/google" class = "btn btn-success active" role="button">Google Login</a>
-        {{/userName}}
+<!--        {{^userName}}-->
+<!--            <a href="/oauth2/authorization/google" class = "btn btn-success active" role="button">Google Login</a>-->
+<!--        {{/userName}}-->
 
-        <!--naver-->
-        {{^userName}}
-            <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
-        {{/userName}}
+<!--        &lt;!&ndash;naver&ndash;&gt;-->
+<!--        {{^userName}}-->
+<!--            <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>-->
+<!--        {{/userName}}-->
     </div>
     <!-- Call to Action-->
     <div class="card text-white bg-danger my-5 py-4 text-center">
